@@ -34,7 +34,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opa
 
 /* ---------- type ---------- */
 h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
-h1{font-size:clamp(2.75rem,7.2vw,5.6rem);font-weight:800;letter-spacing:-.045em}
+h1,.display{font-size:clamp(2.75rem,7.2vw,5.6rem);font-weight:800;letter-spacing:-.045em}
+.display{margin:0;line-height:1.02;text-wrap:balance}
+.hero h1.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.14em;line-height:1.6;text-wrap:normal;display:inline-flex}
 h2{font-size:clamp(2rem,4.6vw,3.6rem)}
 h3{font-size:1.25rem;letter-spacing:-.02em;line-height:1.2}
 .serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;color:var(--red2)}
@@ -118,11 +120,11 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255
 .nowline{position:absolute;top:0;bottom:0;left:60%;width:2px;background:linear-gradient(180deg,transparent,var(--red) 20%,var(--red) 80%,transparent);box-shadow:0 0 24px 2px rgba(225,13,44,.6);z-index:1;pointer-events:none}
 .nowline::before{content:"NOW";position:absolute;top:14%;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:.62rem;font-weight:800;letter-spacing:.14em;padding:4px 8px;border-radius:6px;box-shadow:0 0 20px rgba(225,13,44,.7)}
 .hero-copy{position:relative}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .06em .14em 0;margin-bottom:-.14em}
+.hero .display .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .06em .14em 0;margin-bottom:-.14em}
 .hero h1 .w span{display:inline-block}
-.js .hero h1 .w span{transform:translateY(110%);opacity:0}
-.hero.ready h1 .w span{animation:rise .9s var(--ease) forwards}
-.hero.ready h1 .w:nth-child(2) span{animation-delay:.08s}.hero.ready h1 .w:nth-child(3) span{animation-delay:.16s}.hero.ready h1 .w:nth-child(4) span{animation-delay:.24s}.hero.ready h1 .w:nth-child(5) span{animation-delay:.32s}
+.js .hero .display .w span{transform:translateY(110%);opacity:0}
+.hero.ready .display .w span{animation:rise .9s var(--ease) forwards}
+.hero.ready .display .w:nth-child(2) span{animation-delay:.08s}.hero.ready .display .w:nth-child(3) span{animation-delay:.16s}.hero.ready .display .w:nth-child(4) span{animation-delay:.24s}.hero.ready .display .w:nth-child(5) span{animation-delay:.32s}
 @keyframes rise{to{transform:none;opacity:1}}
 .hero .lead{margin-top:26px}
 .cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:34px}
@@ -409,7 +411,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wra
 /* ---------- motion prefs ---------- */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
-  .hero h1 .w span{transform:none;opacity:1}
+  .hero .display .w span{transform:none;opacity:1}
   .fade-up,.rv{opacity:1;transform:none}
   .stage{opacity:1}
 }
@@ -421,7 +423,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wra
   .nowline::before{display:none}
 }
 @media (max-width:600px){
-  h1{font-size:clamp(2.5rem,12vw,3.4rem)}
+  h1:not(.eyebrow),.display{font-size:clamp(2.5rem,12vw,3.4rem)}
   .badge img{height:50px}
   .stat{padding:20px}
 }
@@ -429,8 +431,8 @@ footer .bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wra
 /* scripts without Instrument Serif glyphs fall back to a system serif */
 :lang(ar) .serif,:lang(ru) .serif,:lang(sr) .serif{font-family:Georgia,"Times New Roman",serif}
 [dir=rtl]{--serif:Georgia,"Times New Roman",serif}
-[dir=rtl] .hero h1 .w{padding:0 0 .14em .06em}
-:lang(ar) h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.15}
+[dir=rtl] .hero .display .w{padding:0 0 .14em .06em}
+:lang(ar) .display{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.15}
 [dir=rtl] .ticker .track,[dir=rtl] .langs .l{animation-direction:reverse}
 [dir=rtl] .langs .l:nth-child(2){animation-direction:normal}
 [dir=rtl] .field{direction:ltr}
