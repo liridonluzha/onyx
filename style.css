@@ -64,9 +64,10 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255
 .nav{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
 .nav .bar{pointer-events:auto;margin:0 auto;max-width:calc(var(--max) - 40px);height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 18px;border-radius:999px;border:1px solid transparent;transition:background .4s,border-color .4s,box-shadow .4s,backdrop-filter .4s}
 .nav.scrolled .bar{background:rgba(9,9,12,.72);border-color:var(--line);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);box-shadow:0 10px 40px -10px rgba(0,0,0,.7)}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:-.04em}
-.brand .mark{width:30px;height:30px;flex:none;filter:drop-shadow(0 0 8px rgba(225,13,44,.55))}
-.brand .sub{font-weight:400;color:var(--muted);margin-left:-4px}
+.brand{display:inline-flex;align-items:center;gap:0;text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:-.04em;white-space:nowrap}
+.brand .mark{width:30px;height:30px;flex:none;margin-right:10px;filter:drop-shadow(0 0 8px rgba(225,13,44,.55))}
+.brand .dot{margin:0}
+.brand .sub{font-weight:400;color:var(--muted);margin-left:.28em}
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:.93rem;font-weight:500;padding:8px 13px;border-radius:999px;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
