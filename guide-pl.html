@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pl" dir="ltr">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__onyx)document.documentElement.classList.remove("js")},2500)</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050507">
+<title>Jak oglądać IPTV na iPhonie i iPadzie z playlistą M3U lub logowaniem Xtream – Onyx IPTV</title>
+<meta name="description" content="Krok po kroku: skonfiguruj playlistę M3U lub dane logowania Xtream Codes swojego dostawcy IPTV na iPhonie i iPadzie w Onyx IPTV, wczytaj EPG i rozwiąż najczęstsze problemy z odtwarzaniem.">
+<link rel="canonical" href="https://liridonluzha.github.io/onyx/guide-pl.html">
+<link rel="alternate" hreflang="en" href="https://liridonluzha.github.io/onyx/guide.html">
+<link rel="alternate" hreflang="de" href="https://liridonluzha.github.io/onyx/anleitung.html">
+<link rel="alternate" hreflang="fr" href="https://liridonluzha.github.io/onyx/guide-fr.html">
+<link rel="alternate" hreflang="es" href="https://liridonluzha.github.io/onyx/guide-es.html">
+<link rel="alternate" hreflang="it" href="https://liridonluzha.github.io/onyx/guide-it.html">
+<link rel="alternate" hreflang="pt" href="https://liridonluzha.github.io/onyx/guide-pt.html">
+<link rel="alternate" hreflang="nl" href="https://liridonluzha.github.io/onyx/guide-nl.html">
+<link rel="alternate" hreflang="tr" href="https://liridonluzha.github.io/onyx/guide-tr.html">
+<link rel="alternate" hreflang="pl" href="https://liridonluzha.github.io/onyx/guide-pl.html">
+<link rel="alternate" hreflang="ro" href="https://liridonluzha.github.io/onyx/guide-ro.html">
+<link rel="alternate" hreflang="hr" href="https://liridonluzha.github.io/onyx/guide-hr.html">
+<link rel="alternate" hreflang="bs" href="https://liridonluzha.github.io/onyx/guide-bs.html">
+<link rel="alternate" hreflang="sr" href="https://liridonluzha.github.io/onyx/guide-sr.html">
+<link rel="alternate" hreflang="sq" href="https://liridonluzha.github.io/onyx/guide-sq.html">
+<link rel="alternate" hreflang="ru" href="https://liridonluzha.github.io/onyx/guide-ru.html">
+<link rel="alternate" hreflang="ar" href="https://liridonluzha.github.io/onyx/guide-ar.html">
+<link rel="alternate" hreflang="x-default" href="https://liridonluzha.github.io/onyx/guide.html">
+<link rel="icon" type="image/png" sizes="180x180" href="img/icon-180.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=dd5808cd">
+<meta name="apple-itunes-app" content="app-id=6791109716">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Onyx IPTV">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Jak oglądać IPTV na iPhonie z M3U lub Xtream – Onyx IPTV">
+<meta property="og:description" content="Skonfiguruj playlistę M3U lub logowanie Xtream kilkoma dotknięciami, wczytaj EPG i rozwiąż typowe problemy z odtwarzaniem.">
+<meta property="og:url" content="https://liridonluzha.github.io/onyx/guide-pl.html">
+<meta property="og:image" content="https://liridonluzha.github.io/onyx/img/og-pl.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jak oglądać IPTV na iPhonie z M3U lub Xtream – Onyx IPTV">
+<meta name="twitter:description" content="Skonfiguruj playlistę M3U lub logowanie Xtream kilkoma dotknięciami, wczytaj EPG i rozwiąż typowe problemy z odtwarzaniem.">
+<meta name="twitter:image" content="https://liridonluzha.github.io/onyx/img/og-pl.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "HowTo", "inLanguage": "pl", "name": "Konfiguracja playlisty IPTV na iPhonie w Onyx IPTV", "description": "Dodaj playlistę M3U lub dane logowania Xtream Codes swojego dostawcy do Onyx IPTV na iPhonie lub iPadzie.", "step": [{"@type": "HowToStep", "name": "Zainstaluj Onyx IPTV", "text": "Pobierz Onyx IPTV z App Store i otwórz aplikację. Wybierz najpierw playlistę demonstracyjną, jeśli chcesz się rozejrzeć bez dostawcy."}, {"@type": "HowToStep", "name": "Wybierz rodzaj logowania", "text": "Przejdź do Ustawienia, Połączenia, Dodaj dostawcę. Wybierz M3U dla adresu playlisty lub Xtream dla adresu serwera, nazwy użytkownika i hasła."}, {"@type": "HowToStep", "name": "Wklej link lub dane logowania", "text": "Wklej link M3U albo link get.php lub player_api od dostawcy. Onyx rozpoznaje linki Xtream i sam uzupełnia serwer, nazwę użytkownika i hasło."}, {"@type": "HowToStep", "name": "Wczytaj program", "text": "Konta Xtream wczytują EPG automatycznie. Dla playlist M3U dodaj adres XMLTV dostawcy jako źródło EPG."}, {"@type": "HowToStep", "name": "Zacznij oglądać", "text": "Otwórz Telewizję na żywo, dotknij kanału, oznacz ulubione i przejdź do zakładki Program, aby zobaczyć pełną siatkę."}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-live" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></g></symbol>
+    <symbol id="i-guide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M10 10v9M15 10v9"/></g></symbol>
+    <symbol id="i-rewind" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3.5 3.5V9H9"/><path d="M12 8v4.5l3 1.8"/></g></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7.5 4v16M16.5 4v16M3 9h4.5M3 15h4.5M16.5 9H21M16.5 15H21"/></g></symbol>
+    <symbol id="i-engine" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M8 7V4h8v3M8 17v3h8v-3"/><path d="M10 10.5v3l3-1.5z" fill="currentColor"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.6-3 8.3-7 9.5-4-1.2-7-4.9-7-9.5V6z"/><path d="M9.3 12.2l2 2 3.6-4"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></g></symbol>
+    <symbol id="i-tablet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M10.5 18h3"/></g></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8 21h8"/></g></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#141418" stroke="rgba(255,255,255,.14)"/><rect x="14.4" y="8" width="3.2" height="16" rx="1.6" fill="#E10D2C"/></symbol>
+  </defs>
+</svg>
+<header class="nav" id="top">
+  <div class="bar">
+    <a class="brand" href="pl.html" aria-label="Strona główna Onyx IPTV"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><span class="wm">onyx<span class="dot">.</span><span class="sub">iptv</span></span></a>
+    <nav class="nav-links" aria-label="Nawigacja główna">
+      <a href="pl.html#story">Prezentacja</a><a href="pl.html#features">Funkcje</a><a href="pl.html#devices">Urządzenia</a><a href="pl.html#pro">Pro</a><a href="guide-pl.html" aria-current="page">Instrukcja konfiguracji</a><a href="pl.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <details class="lang-menu"><summary aria-label="Język"><svg aria-hidden="true"><use href="#i-globe"/></svg><span>PL</span></summary><ul><li><a href="guide.html" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="anleitung.html" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="guide-fr.html" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="guide-es.html" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="guide-it.html" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="guide-pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a></li><li><a href="guide-nl.html" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a></li><li><a href="guide-tr.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li><li><a href="guide-pl.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="page">Polski</a></li><li><a href="guide-ro.html" hreflang="ro" lang="ro" data-lang="ro">Română</a></li><li><a href="guide-hr.html" hreflang="hr" lang="hr" data-lang="hr">Hrvatski</a></li><li><a href="guide-bs.html" hreflang="bs" lang="bs" data-lang="bs">Bosanski</a></li><li><a href="guide-sr.html" hreflang="sr" lang="sr" data-lang="sr">Српски</a></li><li><a href="guide-sq.html" hreflang="sq" lang="sq" data-lang="sq">Shqip</a></li><li><a href="guide-ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li><li><a href="guide-ar.html" hreflang="ar" lang="ar" data-lang="ar">العربية</a></li></ul></details>
+      <a class="btn btn-primary btn-sm" href="https://apps.apple.com/pl/app/onyx-iptv/id6791109716"><svg aria-hidden="true"><use href="#i-apple"/></svg>Pobierz</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet">
+  <a href="pl.html#story">Prezentacja</a><a href="pl.html#features">Funkcje</a><a href="pl.html#devices">Urządzenia</a><a href="pl.html#pro">Onyx Pro</a><a href="guide-pl.html">Instrukcja konfiguracji</a><a href="pl.html#faq">FAQ</a>
+  <div class="sheet-langs" aria-label="Język"><a href="guide.html" hreflang="en" lang="en" data-lang="en">English</a><a href="anleitung.html" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="guide-fr.html" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="guide-es.html" hreflang="es" lang="es" data-lang="es">Español</a><a href="guide-it.html" hreflang="it" lang="it" data-lang="it">Italiano</a><a href="guide-pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a><a href="guide-nl.html" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a><a href="guide-tr.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a><a href="guide-pl.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="page">Polski</a><a href="guide-ro.html" hreflang="ro" lang="ro" data-lang="ro">Română</a><a href="guide-hr.html" hreflang="hr" lang="hr" data-lang="hr">Hrvatski</a><a href="guide-bs.html" hreflang="bs" lang="bs" data-lang="bs">Bosanski</a><a href="guide-sr.html" hreflang="sr" lang="sr" data-lang="sr">Српски</a><a href="guide-sq.html" hreflang="sq" lang="sq" data-lang="sq">Shqip</a><a href="guide-ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a><a href="guide-ar.html" hreflang="ar" lang="ar" data-lang="ar">العربية</a></div>
+</div>
+
+<main id="main" class="page"><section style="padding-top:0"><div class="wrap article">
+  <p class="eyebrow">Instrukcja konfiguracji</p>
+  <h1>Jak oglądać IPTV na iPhonie i iPadzie z playlistą M3U lub logowaniem Xtream</h1>
+  <p class="lead">Jeśli dostawca IPTV dał Ci link M3U lub dane logowania Xtream Codes, możesz oglądać w Onyx IPTV w około dwie minuty. Ta instrukcja omawia oba przypadki, a także EPG i najczęstsze problemy.</p>
+  <p class="note">Onyx IPTV to wyłącznie odtwarzacz. Nie dostarcza, nie hostuje ani nie sprzedaje kanałów, filmów ani seriali. Potrzebujesz subskrypcji u dostawcy IPTV i odpowiadasz za prawa do odtwarzanych treści.</p>
+
+  <h2>Czego potrzebujesz</h2>
+  <ul>
+    <li>iPhone’a lub iPada z iOS 18 lub nowszym albo Apple TV (aplikacja na tvOS jest na tej samej stronie App Store).</li>
+    <li><a href="https://apps.apple.com/pl/app/onyx-iptv/id6791109716">Onyx IPTV</a> z App Store (bezpłatnie).</li>
+    <li>Od dostawcy jedno z poniższych: <strong>adres playlisty M3U / M3U8</strong>, <strong>dane logowania Xtream Codes</strong> (adres serwera, nazwa użytkownika, hasło) lub <strong>link get.php / player_api</strong> zawierający te dane.</li>
+  </ul>
+
+  <h2>Konfiguracja playlisty M3U</h2>
+  <div class="steps-list">
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Otwórz Ustawienia → Połączenia → Dodaj dostawcę</h3><p>Wybierz <strong>M3U</strong>. Nadaj połączeniu nazwę, aby później odróżniać dostawców.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Wklej adres playlisty</h3><p>Wklej pełny link, łącznie z ewentualną częścią <code>?username=…&amp;password=…</code>. Nie dodawaj spacji przed ani po.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Dodaj źródło EPG (opcjonalnie)</h3><p>Jeśli dostawca udostępnia adres XMLTV lub EPG, wklej go w pole EPG. Onyx pokaże wtedy bieżący program, paski postępu i siatkę programu.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Zapisz i wczytaj</h3><p>Onyx pobiera playlistę, sortuje kanały w grupy i automatycznie oddziela telewizję na żywo od filmów i seriali.</p></div>
+  </div>
+
+  <h2>Konfiguracja logowania Xtream Codes</h2>
+  <div class="steps-list">
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Otwórz Ustawienia → Połączenia → Dodaj dostawcę</h3><p>Wybierz <strong>Xtream</strong>.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Wklej link lub wpisz dane</h3><p>Wklej link <code>get.php</code> lub <code>player_api</code> od dostawcy, a Onyx uzupełni serwer, nazwę użytkownika i hasło. Możesz też wpisać trzy wartości ręcznie. Adres serwera zwykle wygląda tak: <code>http://host:port</code>.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Sprawdź kartę stanu</h3><p>Po zalogowaniu karta połączenia pokazuje datę wygaśnięcia konta, liczbę jednoczesnych strumieni dozwolonych w Twoim planie oraz liczbę kanałów obsługujących catch-up.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Program i catch-up wczytują się automatycznie</h3><p>Konta Xtream dostarczają EPG wraz z logowaniem. Kanały z archiwum pokazują opcję odtworzenia, a półka „Coś przegapiłeś?” zbiera zakończone programy.</p></div>
+  </div>
+
+  <h2>Korzystanie z aplikacji</h2>
+  <ul>
+    <li><strong>Telewizja na żywo</strong>: lista pokazuje dla każdego kanału bieżący program, pasek postępu i pozostały czas. Dotknij gwiazdki, aby dodać do ulubionych. Filtruj według grupy lub kategorii.</li>
+    <li><strong>Program</strong>: pełna siatka EPG z linią „teraz”. Przeszukuj cały program po tytule i ustaw przypomnienie o nadchodzącej audycji.</li>
+    <li><strong>Biblioteka</strong>: filmy i seriale z plakatami, fabułą, obsadą i zwiastunami. „Oglądaj dalej” wznawia tam, gdzie skończyłeś.</li>
+    <li><strong>Szukaj</strong>: jedno wyszukiwanie w kanałach, filmach i serialach.</li>
+    <li><strong>Grupowanie jakości</strong> (Pro): warianty SD, HD, FHD i 4K tego samego kanału zwijają się do jednego wiersza.</li>
+  </ul>
+
+  <h2>Rozwiązywanie problemów</h2>
+  <div class="faq-list">
+    <details open><summary>„Nie udało się zalogować” lub pusta lista kanałów<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Sprawdź, czy w adresie serwera, nazwie użytkownika lub haśle nie ma dodatkowych spacji. Upewnij się, że konto nie wygasło (karta stanu pokazuje datę). Niektórzy dostawcy blokują połączenia VPN.</p></div></details>
+    <details><summary>Strumień nie startuje lub przerywa po kilku sekundach<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Najpierw sprawdź, czy ten sam strumień działa w odtwarzaczu polecanym przez dostawcę. Jeśli tak, Twój plan mógł osiągnąć limit jednoczesnych strumieni. Onyx ostrzega przed odtwarzaniem, gdy wszystkie miejsca są zajęte.</p></div></details>
+    <details><summary>Obraz jest, ale nie ma dźwięku, albo plik to MKV lub AVI<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Onyx używa najpierw natywnego odtwarzacza iOS i automatycznie przełącza się na silnik VLC dla kontenerów i kodeków, których iOS nie dekoduje. Jeśli strumień nadal nie działa, przejdź do Ustawienia → Odtwarzanie i zmień preferowany silnik.</p></div></details>
+    <details><summary>Program jest pusty<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Playlisty M3U wymagają osobnego adresu EPG (XMLTV) od dostawcy. Konta Xtream wczytują go automatycznie; użyj Ustawienia → Odśwież zawartość, jeśli dane są nieaktualne.</p></div></details>
+    <details><summary>Nic nie pomaga<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Napisz na <a href="mailto:onyx.iptv.support@gmail.com">onyx.iptv.support@gmail.com</a>. Nie podawaj w wiadomości hasła do konta u dostawcy.</p></div></details>
+  </div>
+
+  <div class="cta-band">
+    <h2>Kiedy będziesz gotowy</h2>
+    <p class="sub" style="margin:0 auto 22px">Bezpłatne pobranie. Jeśli chcesz, wypróbuj najpierw playlistę demonstracyjną.</p>
+    <div class="cta-row"><a class="badge" href="https://apps.apple.com/pl/app/onyx-iptv/id6791109716" aria-label="Pobierz Onyx IPTV w App Store"><img src="img/app-store-badge.svg" alt="Pobierz w App Store" width="162" height="54"></a></div>
+  </div>
+</div></section></main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="pl.html"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><span class="wm">onyx<span class="dot">.</span><span class="sub">iptv</span></span></a>
+        <p class="legal">Onyx IPTV to odtwarzacz dla subskrypcji IPTV, którą już masz. Nie dostarcza, nie hostuje ani nie sprzedaje kanałów, filmów ani seriali. Odpowiadasz za swoje źródła i prawa do odtwarzanych treści.</p>
+      </div>
+      <div>
+        <h4>Produkt</h4>
+        <ul><li><a href="pl.html#story">Prezentacja</a></li><li><a href="pl.html#features">Funkcje</a></li><li><a href="pl.html#devices">Urządzenia</a></li><li><a href="pl.html#pro">Onyx Pro</a></li><li><a href="guide-pl.html">Instrukcja konfiguracji</a></li><li><a href="pl.html#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Pomoc i informacje prawne</h4>
+        <ul><li><a href="https://liridonluzha.github.io/onyx-legal/support.html">Wsparcie</a></li><li><a href="https://liridonluzha.github.io/onyx-legal/">Prywatność</a></li><li><a href="https://liridonluzha.github.io/onyx-legal/terms.html">Warunki</a></li></ul>
+        <h4 style="margin-top:22px">Język</h4>
+        <div class="footer-langs"><a href="guide.html" hreflang="en" lang="en" data-lang="en">English</a><a href="anleitung.html" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="guide-fr.html" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="guide-es.html" hreflang="es" lang="es" data-lang="es">Español</a><a href="guide-it.html" hreflang="it" lang="it" data-lang="it">Italiano</a><a href="guide-pt.html" hreflang="pt" lang="pt" data-lang="pt">Português</a><a href="guide-nl.html" hreflang="nl" lang="nl" data-lang="nl">Nederlands</a><a href="guide-tr.html" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a><a href="guide-pl.html" hreflang="pl" lang="pl" data-lang="pl" aria-current="page">Polski</a><a href="guide-ro.html" hreflang="ro" lang="ro" data-lang="ro">Română</a><a href="guide-hr.html" hreflang="hr" lang="hr" data-lang="hr">Hrvatski</a><a href="guide-bs.html" hreflang="bs" lang="bs" data-lang="bs">Bosanski</a><a href="guide-sr.html" hreflang="sr" lang="sr" data-lang="sr">Српски</a><a href="guide-sq.html" hreflang="sq" lang="sq" data-lang="sq">Shqip</a><a href="guide-ru.html" hreflang="ru" lang="ru" data-lang="ru">Русский</a><a href="guide-ar.html" hreflang="ar" lang="ar" data-lang="ar">العربية</a></div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© 2026 Coded October · Onyx IPTV</div>
+      <div>Apple, iPhone, iPad, Apple TV i App Store są znakami towarowymi Apple Inc.</div>
+    </div>
+  </div>
+</footer>
+<script src="site.js?v=dd5808cd" defer></script>
+</body>
+</html>
