@@ -3,6 +3,7 @@
 (function () {
   'use strict';
   var d = document, w = window;
+  w.__onyx = true;
   var reduce = w.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = w.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var $ = function (s, r) { return (r || d).querySelector(s); };
@@ -25,6 +26,13 @@
     $$('.sheet a').forEach(function (a) { a.addEventListener('click', function () { toggle(false); }); });
     d.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
   }
+
+  /* language switcher: remember the choice, close the menu on outside click */
+  $$('[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('onyx-lang', a.getAttribute('data-lang')); } catch (e) {} });
+  });
+  var lm = $('.lang-menu');
+  if (lm) d.addEventListener('click', function (e) { if (lm.open && !lm.contains(e.target)) lm.open = false; });
 
   /* hero: fake EPG timeline */
   var epg = $('.epg-bg');
