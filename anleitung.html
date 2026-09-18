@@ -2,7 +2,9 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050507">
 <meta name="color-scheme" content="dark">
 <title>IPTV auf dem iPhone einrichten: M3U-Playlist oder Xtream-Zugang – Onyx IPTV</title>
 <meta name="description" content="Schritt für Schritt: M3U-Playlist oder Xtream-Codes-Zugang deines IPTV-Anbieters auf iPhone und iPad mit Onyx IPTV einrichten, EPG laden und die häufigsten Wiedergabeprobleme lösen.">
@@ -10,6 +12,9 @@
 <link rel="alternate" hreflang="en" href="https://liridonluzha.github.io/onyx/guide.html">
 <link rel="alternate" hreflang="de" href="https://liridonluzha.github.io/onyx/anleitung.html">
 <link rel="icon" type="image/png" sizes="180x180" href="img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <meta name="apple-itunes-app" content="app-id=6791109716">
 <meta property="og:title" content="IPTV auf dem iPhone einrichten (M3U / Xtream) – Onyx IPTV">
@@ -25,14 +30,49 @@
 </script>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand" href="de.html">onyx<span class="dot">.</span><span class="sub">iptv</span></a>
-  <nav class="main"><a href="de.html#features">Funktionen</a><a href="de.html#pro">Onyx Pro</a><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a><a class="lang" href="guide.html" hreflang="en" lang="en">English</a></nav>
-</div></header>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-live" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></g></symbol>
+    <symbol id="i-guide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M10 10v9M15 10v9"/></g></symbol>
+    <symbol id="i-rewind" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3.5 3.5V9H9"/><path d="M12 8v4.5l3 1.8"/></g></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7.5 4v16M16.5 4v16M3 9h4.5M3 15h4.5M16.5 9H21M16.5 15H21"/></g></symbol>
+    <symbol id="i-engine" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M8 7V4h8v3M8 17v3h8v-3"/><path d="M10 10.5v3l3-1.5z" fill="currentColor"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.6-3 8.3-7 9.5-4-1.2-7-4.9-7-9.5V6z"/><path d="M9.3 12.2l2 2 3.6-4"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></g></symbol>
+    <symbol id="i-tablet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M10.5 18h3"/></g></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8 21h8"/></g></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#141418" stroke="rgba(255,255,255,.14)"/><rect x="14.4" y="8" width="3.2" height="16" rx="1.6" fill="#E10D2C"/></symbol>
+  </defs>
+</svg>
+<header class="nav" id="top">
+  <div class="bar">
+    <a class="brand" href="de.html" aria-label="Onyx IPTV Startseite"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>onyx<span class="dot">.</span><span class="sub">iptv</span></a>
+    <nav class="nav-links" aria-label="Hauptnavigation">
+      <a href="de.html#story">Rundgang</a><a href="de.html#features">Funktionen</a><a href="de.html#devices">Geräte</a><a href="de.html#pro">Pro</a><a href="anleitung.html">Anleitung</a><a href="de.html#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="lang" href="guide.html" hreflang="en" lang="en" aria-label="English version">EN</a>
+      <a class="btn btn-primary btn-sm" href="https://apps.apple.com/de/app/onyx-iptv/id6791109716"><svg aria-hidden="true"><use href="#i-apple"/></svg>Laden</a>
+      <button class="burger" aria-label="Menü" aria-expanded="false" aria-controls="sheet"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="sheet" id="sheet">
+  <a href="de.html#story">Rundgang</a><a href="de.html#features">Funktionen</a><a href="de.html#devices">Geräte</a><a href="de.html#pro">Onyx Pro</a><a href="anleitung.html">Anleitung</a><a href="de.html#faq">FAQ</a>
+  <a class="sheet-cta" href="guide.html" hreflang="en" lang="en">English →</a>
+</div>
 
-<section><div class="wrap article">
+<main id="main" class="page"><section style="padding-top:0"><div class="wrap article">
   <p class="eyebrow">Anleitung</p>
-  <h1 style="font-size:clamp(1.9rem,4vw,3rem)">IPTV auf iPhone und iPad einrichten: M3U-Playlist oder Xtream-Zugang</h1>
+  <h1>IPTV auf iPhone und iPad einrichten: M3U-Playlist oder Xtream-Zugang</h1>
   <p class="lead">Wenn dein IPTV-Anbieter dir einen M3U-Link oder einen Xtream-Codes-Zugang gegeben hat, läuft er in Onyx IPTV in etwa zwei Minuten. Diese Anleitung erklärt beides, dazu das EPG und die häufigsten Stolpersteine.</p>
   <p class="note">Onyx IPTV ist ausschließlich ein Player. Die App stellt keine Sender, Filme oder Serien bereit, hostet nichts und verkauft nichts. Du brauchst ein Abo bei einem IPTV-Anbieter und bist für die Rechte an den abgespielten Inhalten verantwortlich.</p>
 
@@ -44,19 +84,19 @@
   </ul>
 
   <h2>M3U-Playlist einrichten</h2>
-  <div class="steps">
-    <div class="card"><h3>Einstellungen → Verbindungen → Anbieter hinzufügen</h3><p>Wähle <strong>M3U</strong>. Gib der Verbindung einen Namen, damit du mehrere Anbieter später auseinanderhältst.</p></div>
-    <div class="card"><h3>Playlist-URL einfügen</h3><p>Füge den kompletten Link ein, inklusive eines eventuellen <code>?username=…&amp;password=…</code>-Teils. Keine Leerzeichen davor oder dahinter.</p></div>
-    <div class="card"><h3>EPG-Quelle hinzufügen (optional)</h3><p>Wenn dein Anbieter eine XMLTV- oder EPG-URL anbietet, trag sie ins EPG-Feld ein. Onyx zeigt dann die laufende Sendung, Fortschrittsbalken und das Guide-Raster.</p></div>
-    <div class="card"><h3>Speichern und laden</h3><p>Onyx lädt die Playlist, sortiert die Sender in Gruppen und trennt Live-TV automatisch von Filmen und Serien.</p></div>
+  <div class="steps-list">
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Einstellungen → Verbindungen → Anbieter hinzufügen</h3><p>Wähle <strong>M3U</strong>. Gib der Verbindung einen Namen, damit du mehrere Anbieter später auseinanderhältst.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Playlist-URL einfügen</h3><p>Füge den kompletten Link ein, inklusive eines eventuellen <code>?username=…&amp;password=…</code>-Teils. Keine Leerzeichen davor oder dahinter.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>EPG-Quelle hinzufügen (optional)</h3><p>Wenn dein Anbieter eine XMLTV- oder EPG-URL anbietet, trag sie ins EPG-Feld ein. Onyx zeigt dann die laufende Sendung, Fortschrittsbalken und das Guide-Raster.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Speichern und laden</h3><p>Onyx lädt die Playlist, sortiert die Sender in Gruppen und trennt Live-TV automatisch von Filmen und Serien.</p></div>
   </div>
 
   <h2>Xtream-Codes-Zugang einrichten</h2>
-  <div class="steps">
-    <div class="card"><h3>Einstellungen → Verbindungen → Anbieter hinzufügen</h3><p>Wähle <strong>Xtream</strong>.</p></div>
-    <div class="card"><h3>Link einfügen oder Daten eintippen</h3><p>Füge den <code>get.php</code>- oder <code>player_api</code>-Link deines Anbieters ein, Onyx füllt Server, Benutzername und Passwort selbst aus. Oder trag die drei Werte von Hand ein. Die Server-URL sieht meist so aus: <code>http://host:port</code>.</p></div>
-    <div class="card"><h3>Statuskarte prüfen</h3><p>Nach der Anmeldung zeigt die Verbindungskarte das Ablaufdatum des Kontos, die Zahl gleichzeitiger Streams deines Tarifs und wie viele Sender Catch-up unterstützen.</p></div>
-    <div class="card"><h3>Guide und Catch-up laden automatisch</h3><p>Xtream-Konten liefern das EPG mit der Anmeldung. Sender mit Archiv zeigen eine Replay-Option, und der Bereich „Etwas verpasst?“ sammelt beendete Sendungen.</p></div>
+  <div class="steps-list">
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Einstellungen → Verbindungen → Anbieter hinzufügen</h3><p>Wähle <strong>Xtream</strong>.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Link einfügen oder Daten eintippen</h3><p>Füge den <code>get.php</code>- oder <code>player_api</code>-Link deines Anbieters ein, Onyx füllt Server, Benutzername und Passwort selbst aus. Oder trag die drei Werte von Hand ein. Die Server-URL sieht meist so aus: <code>http://host:port</code>.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Statuskarte prüfen</h3><p>Nach der Anmeldung zeigt die Verbindungskarte das Ablaufdatum des Kontos, die Zahl gleichzeitiger Streams deines Tarifs und wie viele Sender Catch-up unterstützen.</p></div>
+    <div class="card"><span class="n" aria-hidden="true"></span><h3>Guide und Catch-up laden automatisch</h3><p>Xtream-Konten liefern das EPG mit der Anmeldung. Sender mit Archiv zeigen eine Replay-Option, und der Bereich „Etwas verpasst?“ sammelt beendete Sendungen.</p></div>
   </div>
 
   <h2>Die App im Alltag</h2>
@@ -69,24 +109,43 @@
   </ul>
 
   <h2>Probleme lösen</h2>
-  <div class="faq">
-    <details open><summary>„Anmeldung fehlgeschlagen“ oder leere Senderliste</summary><p>Prüfe Server-URL, Benutzername und Passwort auf Leerzeichen. Stelle sicher, dass das Konto nicht abgelaufen ist (die Statuskarte zeigt das Datum). Manche Anbieter blockieren VPN-Verbindungen.</p></details>
-    <details><summary>Ein Stream startet nicht oder bricht nach Sekunden ab</summary><p>Prüfe zuerst, ob derselbe Stream im vom Anbieter empfohlenen Player läuft. Wenn ja, ist vermutlich das Stream-Limit deines Tarifs erreicht. Onyx warnt vor der Wiedergabe, wenn alle Plätze belegt sind.</p></details>
-    <details><summary>Bild läuft, aber kein Ton, oder die Datei ist MKV/AVI</summary><p>Onyx nutzt zuerst den nativen iOS-Player und wechselt automatisch zur VLC-Engine, wenn iOS den Container oder Codec nicht dekodieren kann. Läuft ein Stream trotzdem nicht, wechsle unter Einstellungen → Wiedergabe die bevorzugte Engine.</p></details>
-    <details><summary>Der Guide ist leer</summary><p>M3U-Playlists brauchen eine separate EPG-(XMLTV-)URL vom Anbieter. Xtream-Konten laden sie automatisch; bei veralteten Daten hilft Einstellungen → Inhalte aktualisieren.</p></details>
-    <details><summary>Nichts hilft</summary><p>Schreib an <a href="mailto:onyx.iptv.support@gmail.com">onyx.iptv.support@gmail.com</a>. Bitte kein Anbieter-Passwort in die Mail schreiben.</p></details>
+  <div class="faq-list">
+    <details open><summary>„Anmeldung fehlgeschlagen“ oder leere Senderliste<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Prüfe Server-URL, Benutzername und Passwort auf Leerzeichen. Stelle sicher, dass das Konto nicht abgelaufen ist (die Statuskarte zeigt das Datum). Manche Anbieter blockieren VPN-Verbindungen.</p></div></details>
+    <details><summary>Ein Stream startet nicht oder bricht nach Sekunden ab<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Prüfe zuerst, ob derselbe Stream im vom Anbieter empfohlenen Player läuft. Wenn ja, ist vermutlich das Stream-Limit deines Tarifs erreicht. Onyx warnt vor der Wiedergabe, wenn alle Plätze belegt sind.</p></div></details>
+    <details><summary>Bild läuft, aber kein Ton, oder die Datei ist MKV/AVI<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Onyx nutzt zuerst den nativen iOS-Player und wechselt automatisch zur VLC-Engine, wenn iOS den Container oder Codec nicht dekodieren kann. Läuft ein Stream trotzdem nicht, wechsle unter Einstellungen → Wiedergabe die bevorzugte Engine.</p></div></details>
+    <details><summary>Der Guide ist leer<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>M3U-Playlists brauchen eine separate EPG-(XMLTV-)URL vom Anbieter. Xtream-Konten laden sie automatisch; bei veralteten Daten hilft Einstellungen → Inhalte aktualisieren.</p></div></details>
+    <details><summary>Nichts hilft<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Schreib an <a href="mailto:onyx.iptv.support@gmail.com">onyx.iptv.support@gmail.com</a>. Bitte kein Anbieter-Passwort in die Mail schreiben.</p></div></details>
   </div>
 
-  <div class="cta-band" style="padding:56px 0 0">
+  <div class="cta-band">
     <h2>Wenn du so weit bist</h2>
     <p class="sub" style="margin:0 auto 22px">Kostenloser Download. Probier zuerst die Demo-Playlist, wenn du magst.</p>
-    <div class="cta"><a href="https://apps.apple.com/de/app/onyx-iptv/id6791109716"><img src="img/app-store-badge-de.svg" alt="Laden im App Store" width="156" height="52"></a></div>
+    <div class="cta-row"><a class="badge" href="https://apps.apple.com/de/app/onyx-iptv/id6791109716"><img src="img/app-store-badge-de.svg" alt="Laden im App Store" width="162" height="54"></a></div>
   </div>
-</div></section>
+</div></section></main>
 
-<footer><div class="wrap">
-  <div>© 2026 Liridon Luzha · Onyx IPTV</div>
-  <div><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a><a href="https://liridonluzha.github.io/onyx-legal/privacy.de.html">Datenschutz</a><a href="https://liridonluzha.github.io/onyx-legal/terms.de.html">Nutzungsbedingungen</a><a href="de.html">Start</a><a href="guide.html" lang="en">English</a></div>
-</div></footer>
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="de.html"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>onyx<span class="dot">.</span><span class="sub">iptv</span></a>
+        <p class="legal">Onyx IPTV ist ein Player für das IPTV-Abo, das du bereits hast. Die App stellt keine Sender, Filme oder Serien bereit, hostet nichts und verkauft nichts. Du bist für deine Quellen und die Rechte an den abgespielten Inhalten verantwortlich.</p>
+      </div>
+      <div>
+        <h4>Produkt</h4>
+        <ul><li><a href="de.html">Start</a></li><li><a href="de.html#features">Funktionen</a></li><li><a href="de.html#devices">Geräte</a></li><li><a href="de.html#pro">Onyx Pro</a></li><li><a href="de.html#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Hilfe &amp; Rechtliches</h4>
+        <ul><li><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a></li><li><a href="https://liridonluzha.github.io/onyx-legal/privacy.de.html">Datenschutz</a></li><li><a href="https://liridonluzha.github.io/onyx-legal/terms.de.html">Nutzungsbedingungen</a></li><li><a href="guide.html" hreflang="en" lang="en">English</a></li></ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© 2026 Coded October · Onyx IPTV</div>
+      <div>Apple, iPhone, iPad, Apple TV und App Store sind Marken von Apple Inc.</div>
+    </div>
+  </div>
+</footer>
+<script src="site.js" defer></script>
 </body>
 </html>

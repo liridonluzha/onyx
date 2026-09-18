@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050507">
 <title>Onyx IPTV – IPTV Player for iPhone, iPad & Apple TV (M3U & Xtream)</title>
 <meta name="description" content="Onyx IPTV is a native IPTV player for iPhone, iPad and Apple TV. Add your own M3U playlist or Xtream Codes login and get live TV, a full EPG guide, catch-up TV, movies and series in one elegant app.">
 <link rel="canonical" href="https://liridonluzha.github.io/onyx/">
@@ -12,111 +14,381 @@
 <link rel="alternate" hreflang="x-default" href="https://liridonluzha.github.io/onyx/">
 <link rel="icon" type="image/png" sizes="180x180" href="img/icon-180.png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/en-01-home.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <meta name="apple-itunes-app" content="app-id=6791109716">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Onyx IPTV">
 <meta property="og:title" content="Onyx IPTV – Your IPTV, finally beautiful.">
 <meta property="og:description" content="A native IPTV player for iPhone, iPad and Apple TV. Bring your own M3U or Xtream access: live TV, EPG, catch-up, movies and series.">
 <meta property="og:url" content="https://liridonluzha.github.io/onyx/">
-<meta property="og:image" content="https://liridonluzha.github.io/onyx/img/icon-512.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://liridonluzha.github.io/onyx/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Onyx IPTV – Your IPTV, finally beautiful.">
+<meta name="twitter:description" content="A native IPTV player for iPhone, iPad and Apple TV. Bring your own M3U or Xtream access.">
+<meta name="twitter:image" content="https://liridonluzha.github.io/onyx/img/og.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Onyx IPTV","operatingSystem":"iOS 18.0 or later, tvOS","applicationCategory":"EntertainmentApplication","description":"Native IPTV player for iPhone, iPad and Apple TV. Add your own M3U playlist or Xtream Codes login for live TV, EPG, catch-up TV, movies and series.","url":"https://liridonluzha.github.io/onyx/","installUrl":"https://apps.apple.com/app/id6791109716","image":"https://liridonluzha.github.io/onyx/img/icon-512.png","author":{"@type":"Person","name":"Liridon Luzha"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Onyx IPTV","operatingSystem":"iOS 18.0 or later, tvOS","applicationCategory":"EntertainmentApplication","description":"Native IPTV player for iPhone, iPad and Apple TV. Add your own M3U playlist or Xtream Codes login for live TV, EPG, catch-up TV, movies and series.","url":"https://liridonluzha.github.io/onyx/","installUrl":"https://apps.apple.com/app/id6791109716","image":"https://liridonluzha.github.io/onyx/img/icon-512.png","author":{"@type":"Organization","name":"Coded October"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Does Onyx IPTV include TV channels or movies?","acceptedAnswer":{"@type":"Answer","text":"No. Onyx IPTV is a player only. It does not provide, host or sell channels, movies or series. You add the M3U playlist or Xtream login from your own IPTV provider and are responsible for the rights to the content you play."}},
 {"@type":"Question","name":"Which playlist formats does Onyx IPTV support?","acceptedAnswer":{"@type":"Answer","text":"M3U and M3U8 playlists by URL, and Xtream Codes API logins (server URL, username, password). You can also paste a get.php or player_api link and Onyx sets up the account for you. EPG data is loaded from your provider or an XMLTV source."}},
 {"@type":"Question","name":"Can I try Onyx IPTV without a provider?","acceptedAnswer":{"@type":"Answer","text":"Yes. The built-in Demo Playlist uses public test streams and needs no account, so you can explore the whole interface first."}},
-{"@type":"Question","name":"Is Onyx IPTV free?","acceptedAnswer":{"@type":"Answer","text":"The app is free with one provider connection. Onyx Pro is an optional monthly or yearly subscription that adds unlimited connections, iCloud sync, parental controls, quality grouping, Picture in Picture, AirPlay and offline copies."}},
+{"@type":"Question","name":"Is Onyx IPTV free?","acceptedAnswer":{"@type":"Answer","text":"The app is free with one provider connection. Onyx Pro is an optional monthly or yearly subscription, or a one-time lifetime purchase, that adds unlimited connections, iCloud sync, parental controls, quality grouping, Picture in Picture, AirPlay and offline copies."}},
 {"@type":"Question","name":"Does Onyx IPTV collect my data?","acceptedAnswer":{"@type":"Answer","text":"No. There is no account, no analytics SDK and no tracking. Credentials stay in the iOS Keychain on your device, and optional iCloud sync uses your own iCloud account."}}
 ]}
 </script>
 </head>
 <body>
-<header class="top"><div class="wrap">
-  <a class="brand" href="./">onyx<span class="dot">.</span><span class="sub">iptv</span></a>
-  <nav class="main"><a href="#features">Features</a><a href="#pro">Onyx Pro</a><a href="guide.html">Setup guide</a><a href="#faq">FAQ</a><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a><a class="lang" href="de.html" hreflang="de" lang="de">Deutsch</a></nav>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<section class="hero"><div class="wrap">
-  <div>
-    <p class="eyebrow">IPTV player for iPhone, iPad &amp; Apple TV</p>
-    <h1>Your IPTV, finally beautiful<span class="dot">.</span></h1>
-    <p class="lead">Onyx IPTV is a native player for the M3U playlist or Xtream login you already have. Live TV with a real programme guide, catch-up, movies and series in one fast, elegant app.</p>
-    <div class="cta">
-      <a href="https://apps.apple.com/app/id6791109716" aria-label="Download Onyx IPTV on the App Store"><img src="img/app-store-badge.svg" alt="Download on the App Store" width="156" height="52"></a>
-      <div class="meta">Free · Optional Onyx Pro<br>iPhone, iPad &amp; Apple TV · 16 languages</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-live" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.6 5.6a9 9 0 0 0 0 12.8M18.4 5.6a9 9 0 0 1 0 12.8"/></g></symbol>
+    <symbol id="i-guide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M10 10v9M15 10v9"/></g></symbol>
+    <symbol id="i-rewind" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12a8.5 8.5 0 1 0 2.5-6"/><path d="M3.5 3.5V9H9"/><path d="M12 8v4.5l3 1.8"/></g></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7.5 4v16M16.5 4v16M3 9h4.5M3 15h4.5M16.5 9H21M16.5 15H21"/></g></symbol>
+    <symbol id="i-engine" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M8 7V4h8v3M8 17v3h8v-3"/><path d="M10 10.5v3l3-1.5z" fill="currentColor"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.6-3 8.3-7 9.5-4-1.2-7-4.9-7-9.5V6z"/><path d="M9.3 12.2l2 2 3.6-4"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 1 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></g></symbol>
+    <symbol id="i-tablet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M10.5 18h3"/></g></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M8 21h8"/></g></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#141418" stroke="rgba(255,255,255,.14)"/><rect x="14.4" y="8" width="3.2" height="16" rx="1.6" fill="#E10D2C"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="bar">
+    <a class="brand" href="./" aria-label="Onyx IPTV home"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>onyx<span class="dot">.</span><span class="sub">iptv</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Tour</a><a href="#features">Features</a><a href="#devices">Devices</a><a href="#pro">Pro</a><a href="guide.html">Setup guide</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="lang" href="de.html" hreflang="de" lang="de" aria-label="Deutsche Version">DE</a>
+      <a class="btn btn-primary btn-sm" href="https://apps.apple.com/app/id6791109716"><svg aria-hidden="true"><use href="#i-apple"/></svg>Download</a>
+      <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span><span></span></button>
     </div>
-    <p class="note">Bring your own provider. Onyx IPTV does not provide, host or sell channels or content. You are responsible for your sources and the rights to everything you play.</p>
   </div>
-  <div class="phone"><img src="img/en-01-home.webp" alt="Onyx IPTV home screen with a movie hero, popular titles and live channels" width="720" height="1558" fetchpriority="high"></div>
-</div></section>
+</header>
+<div class="sheet" id="sheet">
+  <a href="#story">Tour</a><a href="#features">Features</a><a href="#devices">Devices</a><a href="#pro">Onyx Pro</a><a href="guide.html">Setup guide</a><a href="#faq">FAQ</a>
+  <a class="sheet-cta" href="de.html" hreflang="de" lang="de">Deutsch →</a>
+</div>
 
-<section id="features"><div class="wrap">
-  <h2>Everything your provider offers, in one place</h2>
-  <p class="sub">Onyx reads what your IPTV subscription already exposes and turns it into an app that feels like it belongs on iOS.</p>
-  <div class="grid">
-    <div class="card"><div class="ic">▶</div><h3>Live TV that shows what's on</h3><p>Every channel row carries the running programme, a live progress bar and the time left. Favourites are one tap away.</p></div>
-    <div class="card"><div class="ic">▦</div><h3>A full EPG grid</h3><p>A real TV-guide grid with a red now-line, hours ahead in one swipe, title search across all channels and reminders for upcoming programmes.</p></div>
-    <div class="card"><div class="ic">↺</div><h3>Catch-up TV</h3><p>Replay finished programmes from your provider's archive, restart a running show from the beginning and browse everything you missed.</p></div>
-    <div class="card"><div class="ic">▭</div><h3>Movies &amp; series, properly shelved</h3><p>Posters, categories, seasons and episodes, plot, cast, runtime and trailers. Continue Watching and auto-next-episode included.</p></div>
-    <div class="card"><div class="ic">◐</div><h3>Plays what other players can't</h3><p>Native AVPlayer for speed and battery life, with a VLC engine as fallback for MKV, AVI and other containers iOS cannot decode.</p></div>
-    <div class="card"><div class="ic">⌂</div><h3>Private by design</h3><p>No account, no analytics, no tracking. Credentials live in the iOS Keychain. Optional iCloud sync stays inside your own iCloud.</p></div>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="epg-bg" aria-hidden="true"></div>
+  <div class="nowline" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow fade-up">IPTV player for iPhone, iPad &amp; Apple TV</p>
+      <h1 id="h1"><span class="w"><span>Your</span></span> <span class="w"><span>IPTV,</span></span><br><span class="w"><span class="serif">finally</span></span> <span class="w"><span>beautiful<span class="dot">.</span></span></span></h1>
+      <p class="lead fade-up d1">Onyx is a native player for the M3U playlist or Xtream login you already have. Live TV with a real programme guide, catch-up, movies and series. Fast, private, and built to feel at home on every Apple screen.</p>
+      <div class="cta-row fade-up d2">
+        <a class="badge" href="https://apps.apple.com/app/id6791109716" aria-label="Download Onyx IPTV on the App Store"><img src="img/app-store-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
+        <a class="btn btn-ghost" href="#story">See it in action<svg aria-hidden="true"><use href="#i-down"/></svg></a>
+      </div>
+      <ul class="trust fade-up d3">
+        <li><span class="stars" aria-hidden="true">★★★★★</span>5.0 on the App Store</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free, no account</li>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg>No tracking</li>
+        <li><svg aria-hidden="true"><use href="#i-globe"/></svg>16 languages</li>
+      </ul>
+      <p class="note fade-up d4">Bring your own provider. Onyx IPTV does not provide, host or sell channels or content. You are responsible for your sources and the rights to everything you play.</p>
+    </div>
+    <div class="stage">
+      <div class="float">
+        <div class="chip c1" aria-hidden="true">
+          <div class="ico"><svg><use href="#i-live"/></svg></div>
+          <div><span class="live">LIVE</span><b>Championship Live Match</b><small>Sports One · 19 min left</small><div class="bar"><i></i></div></div>
+        </div>
+        <div class="chip c2" aria-hidden="true">
+          <div class="ico"><svg><use href="#i-bell"/></svg></div>
+          <div><b>Reminder set</b><small>Cinema: Redline · 20:15</small></div>
+        </div>
+        <div class="phone"><div class="screen"><img src="img/en-01-home.webp" alt="Onyx IPTV home screen with a movie hero, Start Here picks and live channels" width="720" height="1558" fetchpriority="high" decoding="async"></div></div>
+      </div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="alt"><div class="wrap">
-  <h2>Built for iPhone, iPad and Apple TV</h2>
-  <p class="sub">SwiftUI throughout, right-to-left layout for Arabic, and an interface in 16 languages: English, German, Turkish, Arabic, Albanian, French, Spanish, Italian, Bosnian, Serbian, Croatian, Polish, Romanian, Dutch, Russian and Portuguese.</p>
-  <div class="shots">
-    <figure><img src="img/en-01-home.webp" alt="Home" loading="lazy" width="720" height="1558"><figcaption>Home</figcaption></figure>
-    <figure><img src="img/en-02-live.webp" alt="Live TV list with now-playing progress" loading="lazy" width="720" height="1558"><figcaption>Live TV</figcaption></figure>
-    <figure><img src="img/en-03-epg.webp" alt="EPG guide grid with now-line" loading="lazy" width="720" height="1558"><figcaption>TV guide</figcaption></figure>
-    <figure><img src="img/en-04-library.webp" alt="Movies and series library with posters" loading="lazy" width="720" height="1558"><figcaption>Library</figcaption></figure>
-    <figure><img src="img/en-05-settings.webp" alt="Settings with provider connections" loading="lazy" width="720" height="1558"><figcaption>Settings</figcaption></figure>
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>M3U</span><span>M3U8</span><span>Xtream Codes</span><span>XMLTV EPG</span><span>Catch-up TV</span><span>Timeshift</span><span>MKV</span><span>AVI</span><span>HEVC</span><span>AirPlay</span><span>Picture in Picture</span><span>iCloud Sync</span><span>16 languages</span><span>iPhone</span><span>iPad</span><span>Apple TV</span>
+  <span>M3U</span><span>M3U8</span><span>Xtream Codes</span><span>XMLTV EPG</span><span>Catch-up TV</span><span>Timeshift</span><span>MKV</span><span>AVI</span><span>HEVC</span><span>AirPlay</span><span>Picture in Picture</span><span>iCloud Sync</span><span>16 languages</span><span>iPhone</span><span>iPad</span><span>Apple TV</span>
+</div></div>
+
+<section class="story" id="story" aria-labelledby="story-h">
+  <div class="wrap">
+    <div class="story-stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="phone"><div class="screen">
+        <img src="img/en-01-home.webp" alt="Home screen" width="720" height="1558" loading="lazy" decoding="async" data-active="true">
+        <img src="img/en-02-live.webp" alt="Live TV list with the running programme and progress per channel" width="720" height="1558" loading="lazy" decoding="async" data-active="false">
+        <img src="img/en-03-epg.webp" alt="EPG guide grid with a red now-line" width="720" height="1558" loading="lazy" decoding="async" data-active="false">
+        <img src="img/en-04-library.webp" alt="Movies and series library with posters" width="720" height="1558" loading="lazy" decoding="async" data-active="false">
+      </div></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3 id="story-h">Home knows what you'll want next.</h3>
+        <p>A cinematic hero, Start Here picks, Continue Watching and the channels you keep coming back to. Everything your provider exposes, without the clutter.</p>
+        <div class="tag"><span>Continue Watching</span><span>Trending</span><span>Favourites</span></div>
+        <div class="step-shot"><div class="phone"><div class="screen"><img src="img/en-01-home.webp" alt="Home screen" width="720" height="1558" loading="lazy" decoding="async"></div></div></div>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Live TV shows what's on, not just what's there.</h3>
+        <p>Every channel row carries the running programme, a live progress bar and the minutes left. Favourites are one tap away, channel groups one swipe.</p>
+        <div class="tag"><span>Now playing</span><span>Favourites</span><span>Channel groups</span></div>
+        <div class="step-shot"><div class="phone"><div class="screen"><img src="img/en-02-live.webp" alt="Live TV list" width="720" height="1558" loading="lazy" decoding="async"></div></div></div>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>A real guide, with a real now-line.</h3>
+        <p>Hours ahead in one swipe, a red now-line, title search across every channel and reminders for what's coming up.</p>
+        <div class="tag"><span>EPG grid</span><span>Guide search</span><span>Reminders</span></div>
+        <div class="step-shot"><div class="phone"><div class="screen"><img src="img/en-03-epg.webp" alt="EPG guide grid" width="720" height="1558" loading="lazy" decoding="async"></div></div></div>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Movies and series, properly shelved.</h3>
+        <p>Posters, seasons and episodes, plot, cast, runtime and trailers. Onyx resumes where you stopped and plays the next episode by itself.</p>
+        <div class="tag"><span>Posters</span><span>Auto next episode</span><span>Trailers</span></div>
+        <div class="step-shot"><div class="phone"><div class="screen"><img src="img/en-04-library.webp" alt="Movies and series library" width="720" height="1558" loading="lazy" decoding="async"></div></div></div>
+      </div>
+    </div>
   </div>
-  <div class="two" style="margin-top:16px"><div class="wide"><img src="img/en-ipad-home.webp" alt="Onyx IPTV on iPad" loading="lazy" width="1200" height="1600"></div><div class="wide"><img src="img/en-tv-live.webp" alt="Onyx IPTV live TV on Apple TV" loading="lazy" width="1600" height="900"></div></div>
-  <p class="sub" style="margin-top:14px">The Apple TV app is a separate download from the same App Store listing and shares the Onyx Pro subscription.</p>
-</div></section>
+</section>
 
-<section id="pro"><div class="wrap pro">
-  <div>
-    <h2>Onyx Pro<span class="badge">PRO</span></h2>
-    <p class="sub">The free app is complete for one provider. Pro is for people who run several accounts or want the extras.</p>
-    <ul>
-      <li>Unlimited provider connections</li>
-      <li>Optional iCloud sync of favourites, history and connections</li>
-      <li>Parental controls with PIN and category locks</li>
-      <li>SD, HD, FHD and 4K variants of a channel grouped into one row</li>
-      <li>Unlimited favourites and extended history</li>
-      <li>Trailers, Picture in Picture and AirPlay</li>
-      <li>Temporary offline copies of your provider's titles, played inside Onyx</li>
-    </ul>
-    <p class="note">Monthly or yearly auto-renewing subscription, charged to your Apple Account. Cancel any time in your App Store settings.</p>
+<section id="features" aria-labelledby="features-h">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Why Onyx</p>
+      <h2 id="features-h">Everything your provider offers. <span class="serif">Nothing</span> it doesn't.</h2>
+      <p class="sub">Onyx reads what your IPTV subscription already exposes and turns it into an app that feels like it belongs on iOS.</p>
+    </div>
+    <div class="bento">
+      <article class="card s7 rv" style="--i:0">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-live"/></svg></div>
+        <div class="txt"><h3>Live TV that shows what's on</h3><p>Every channel row carries the running programme, a live progress bar and the time left. Star a favourite, filter by group, and the list remembers.</p></div>
+        <div class="viz" aria-hidden="true">
+          <div class="ch"><div class="logo" style="background:linear-gradient(135deg,#7b1fa2,#e91e63)">ENT</div><div class="t"><b>Entertainment FHD</b><small>Late Night Comedy</small><div class="pb"><i style="--p:64%"></i></div></div><span class="left">25 min left</span><span class="star">★</span></div>
+          <div class="ch"><div class="logo" style="background:linear-gradient(135deg,#00695c,#26a69a)">S1</div><div class="t"><b>Sports One</b><small>Championship Live Match</small><div class="pb"><i style="--p:82%"></i></div></div><span class="left">6 min left</span><span class="star" style="color:var(--dim)">☆</span></div>
+        </div>
+      </article>
+      <article class="card s5 rv" style="--i:1">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-guide"/></svg></div>
+        <div class="txt"><h3>A full EPG grid</h3><p>A real TV-guide grid with a now-line, hours ahead in one swipe, search across all channels and reminders for upcoming programmes.</p></div>
+        <div class="viz grid-viz" aria-hidden="true">
+          <div class="nl"></div>
+          <div class="lbl">ENT</div><div class="r"><i style="width:40%"></i><i class="on" style="width:45%"></i><i style="width:30%"></i></div>
+          <div class="lbl">S1</div><div class="r"><i style="width:22%"></i><i class="on" style="width:60%"></i><i style="width:30%"></i></div>
+          <div class="lbl">WN24</div><div class="r"><i class="on" style="width:55%"></i><i style="width:30%"></i><i style="width:30%"></i></div>
+        </div>
+      </article>
+      <article class="card s4 rv" style="--i:0">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-rewind"/></svg></div>
+        <div class="txt"><h3>Catch-up TV</h3><p>Replay finished programmes from your provider's archive, or restart a running show from the beginning.</p></div>
+        <div class="viz tl" aria-hidden="true">
+          <div class="ttl">Championship Live Match <small>38 min in</small></div>
+          <div class="bar"><i></i><b></b></div>
+          <div class="acts"><span><svg><use href="#i-rewind"/></svg>Restart</span><span><svg><use href="#i-play"/></svg>Replay yesterday</span></div>
+        </div>
+      </article>
+      <article class="card s4 rv" style="--i:1">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-film"/></svg></div>
+        <div class="txt"><h3>Movies &amp; series, properly shelved</h3><p>Posters, categories, seasons and episodes, plot, cast and trailers. Continue Watching and auto-next-episode included.</p></div>
+        <div class="viz posters" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="card s4 rv" style="--i:2">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-engine"/></svg></div>
+        <div class="txt"><h3>Plays what other players can't</h3><p>Native AVPlayer for speed and battery life, with a VLC engine as fallback for containers iOS cannot decode.</p></div>
+        <div class="viz" aria-hidden="true">
+          <div class="chips"><span>HLS</span><span>TS</span><span class="hi">MKV</span><span class="hi">AVI</span><span>HEVC</span><span>H.264</span><span>AC3</span><span>EAC3</span></div>
+          <div class="engine"><b>AVPlayer</b><svg><use href="#i-down"/></svg><b>VLC fallback</b><span>automatic</span></div>
+        </div>
+      </article>
+      <article class="card s7 rv" style="--i:0">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <div class="txt"><h3>Private by design</h3><p>No account, no analytics SDK, no tracking. Credentials live in the iOS Keychain on your device. Optional iCloud sync stays inside your own iCloud.</p></div>
+        <div class="viz zero" aria-hidden="true">0<small>trackers, analytics SDKs<br>or accounts required</small></div>
+      </article>
+      <article class="card s5 rv" style="--i:1">
+        <div class="ic"><svg aria-hidden="true"><use href="#i-globe"/></svg></div>
+        <div class="txt"><h3>Speaks your language</h3><p>Sixteen interface languages and a right-to-left layout for Arabic. Your guide, your settings, your words.</p></div>
+        <div class="viz langs" aria-hidden="true">
+          <div class="l"><span>Hello</span><span>Hallo</span><span>Merhaba</span><span>مرحبا</span><span>Përshëndetje</span><span>Bonjour</span><span>Hola</span><span>Ciao</span><span>Hello</span><span>Hallo</span><span>Merhaba</span><span>مرحبا</span><span>Përshëndetje</span><span>Bonjour</span><span>Hola</span><span>Ciao</span></div>
+          <div class="l"><span>Zdravo</span><span>Здраво</span><span>Bok</span><span>Cześć</span><span>Salut</span><span>Hallo</span><span>Привет</span><span>Olá</span><span>Zdravo</span><span>Здраво</span><span>Bok</span><span>Cześć</span><span>Salut</span><span>Hallo</span><span>Привет</span><span>Olá</span></div>
+        </div>
+      </article>
+    </div>
   </div>
-  <div class="phone"><img src="img/en-05-settings.webp" alt="Onyx IPTV settings" loading="lazy" width="720" height="1558"></div>
-</div></section>
+</section>
 
-<section class="alt faq" id="faq"><div class="wrap article">
-  <h2>Frequently asked questions</h2>
-  <details open><summary>Does Onyx IPTV include TV channels or movies?</summary><p>No. Onyx IPTV is a player only. It does not provide, host or sell channels, movies or series. You add the M3U playlist or Xtream login from your own IPTV provider and are responsible for the rights to the content you play.</p></details>
-  <details><summary>Which playlist formats are supported?</summary><p>M3U and M3U8 playlists by URL, and Xtream Codes API logins (server URL, username, password). You can also paste a <code>get.php</code> or <code>player_api</code> link and Onyx sets up the account for you. EPG data is loaded from your provider or an XMLTV source.</p></details>
-  <details><summary>Can I try it without a provider?</summary><p>Yes. The built-in Demo Playlist uses public test streams and needs no account, so you can explore the whole interface first.</p></details>
-  <details><summary>Is it free?</summary><p>The app is free with one provider connection. Onyx Pro is an optional monthly or yearly subscription that adds unlimited connections, iCloud sync, parental controls, quality grouping, Picture in Picture, AirPlay and offline copies.</p></details>
-  <details><summary>Does Onyx collect my data?</summary><p>No. There is no account, no analytics SDK and no tracking. Credentials stay in the iOS Keychain on your device, and optional iCloud sync uses your own iCloud account. See the <a href="https://liridonluzha.github.io/onyx-legal/">privacy policy</a>.</p></details>
-  <details><summary>A stream does not play. What can I do?</summary><p>Check that the same stream works in your provider's recommended player, that the server URL, username and password contain no extra spaces, and that your provider has not hit its simultaneous-stream limit. The <a href="guide.html">setup guide</a> has more.</p></details>
-</div></section>
+<section class="devices" id="devices" aria-labelledby="devices-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">iPhone, iPad &amp; Apple TV</p>
+      <h2 id="devices-h">One app. <span class="serif">Every</span> screen in the house.</h2>
+      <p class="sub">Built in SwiftUI for each platform: a touch-first app on iPhone and iPad, and a focus-driven Apple TV app that shares your favourites, history and Onyx Pro subscription.</p>
+      <div class="plat">
+        <span><svg aria-hidden="true"><use href="#i-phone"/></svg>iPhone</span>
+        <span><svg aria-hidden="true"><use href="#i-tablet"/></svg>iPad</span>
+        <span><svg aria-hidden="true"><use href="#i-tv"/></svg>Apple TV</span>
+      </div>
+    </div>
+    <div class="scene rv">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="tv"><div class="screen"><img src="img/en-tv-home.webp" alt="Onyx IPTV on Apple TV: home screen with a featured title and live channels" width="1600" height="900" loading="lazy" decoding="async"></div></div>
+      <div class="tablet"><div class="screen"><img src="img/en-ipad-home.webp" alt="Onyx IPTV on iPad" width="1200" height="1600" loading="lazy" decoding="async"></div></div>
+      <div class="phone"><div class="screen"><img src="img/en-02-live.webp" alt="Onyx IPTV live TV on iPhone" width="720" height="1558" loading="lazy" decoding="async"></div></div>
+    </div>
+    <p class="note rv" style="margin-top:28px">The Apple TV app is a separate download from the same App Store listing and shares the Onyx Pro subscription.</p>
+    <div class="stats">
+      <div class="stat rv" style="--i:0"><b><span data-count="16">16</span></b><span>interface languages, RTL for Arabic</span></div>
+      <div class="stat rv" style="--i:1"><b><span data-count="3">3</span></b><span>platforms: iPhone, iPad, Apple TV</span></div>
+      <div class="stat rv" style="--i:2"><b><span data-count="2">2</span></b><span>playback engines, switched automatically</span></div>
+      <div class="stat rv" style="--i:3"><b><em>0</em></b><span>trackers, analytics SDKs or accounts</span></div>
+    </div>
+  </div>
+</section>
 
-<section class="cta-band"><div class="wrap">
-  <h2>Try it with the demo playlist</h2>
-  <p class="sub" style="margin:0 auto 26px">No account, no sign-up. Add your own provider whenever you are ready.</p>
-  <div class="cta"><a href="https://apps.apple.com/app/id6791109716"><img src="img/app-store-badge.svg" alt="Download on the App Store" width="156" height="52"></a></div>
-</div></section>
+<section id="setup" aria-labelledby="setup-h">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Two minutes to your first channel</p>
+      <h2 id="setup-h">Paste. Load. <span class="serif">Watch.</span></h2>
+      <p class="sub">Onyx recognises M3U links as well as Xtream <code>get.php</code> and <code>player_api</code> URLs and sets the account up for you. Want to look around first? The demo playlist needs no provider at all.</p>
+    </div>
+    <div class="setup">
+      <div class="sc rv" style="--i:0">
+        <div class="n">01</div>
+        <h3>Paste your link</h3>
+        <p>An M3U playlist URL or an Xtream login. Paste the link your provider sent and Onyx fills in server, username and password.</p>
+        <div class="viz"><div class="field" aria-hidden="true"><span class="label">URL</span><span data-type="http://host:8080/get.php?username=…&amp;password=…&amp;type=m3u_plus"></span><span class="cur"></span></div></div>
+      </div>
+      <div class="sc rv" style="--i:1">
+        <div class="n">02</div>
+        <h3>Onyx loads everything</h3>
+        <p>Channels sorted into groups, movies and series shelved separately, the guide loaded from your provider or an XMLTV source.</p>
+        <div class="viz loadrow" aria-hidden="true">
+          <div class="lr"><svg><use href="#i-check"/></svg>Channels sorted into groups<small>done</small></div>
+          <div class="lr"><svg><use href="#i-check"/></svg>Movies &amp; series shelved<small>done</small></div>
+          <div class="lr"><svg><use href="#i-check"/></svg>Guide for the next days<small>done</small></div>
+        </div>
+      </div>
+      <div class="sc rv" style="--i:2">
+        <div class="n">03</div>
+        <h3>Start watching</h3>
+        <p>Tap a channel, star your favourites, set reminders. Catch-up appears by itself wherever your provider keeps an archive.</p>
+        <div class="viz playrow" aria-hidden="true"><span class="playbtn"><svg><use href="#i-play"/></svg>Play</span><span class="eq"><i></i><i></i><i></i><i></i></span></div>
+      </div>
+    </div>
+    <div class="cta-row rv" style="justify-content:center;margin-top:28px"><a class="btn btn-ghost" href="guide.html">Read the full setup guide</a></div>
+  </div>
+</section>
 
-<footer><div class="wrap">
-  <div>© 2026 Liridon Luzha · Onyx IPTV</div>
-  <div><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a><a href="https://liridonluzha.github.io/onyx-legal/">Privacy</a><a href="https://liridonluzha.github.io/onyx-legal/terms.html">Terms</a><a href="guide.html">Setup guide</a><a href="de.html" lang="de">Deutsch</a></div>
-</div></footer>
+<section id="pro" aria-labelledby="pro-h">
+  <div class="wrap">
+    <div class="pro-wrap rv"><div class="pro">
+      <div>
+        <span class="badge-pro">ONYX PRO</span>
+        <h2 id="pro-h">The free app is complete. <span class="serif">Pro</span> is for power users.</h2>
+        <p class="sub">One provider connection, the whole guide, catch-up and the library are free. Pro adds what people with several accounts, or a family, ask for.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited provider connections</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Optional iCloud sync of favourites, history and connections</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Parental controls with PIN and category locks</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>SD, HD, FHD and 4K variants of a channel grouped into one row</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Unlimited favourites and extended history</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Trailers, Picture in Picture and AirPlay</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Temporary offline copies of your provider's titles, played inside Onyx</li>
+        </ul>
+        <div class="plans">
+          <div class="plan"><b>Monthly</b><small>Flexible, cancel any time</small></div>
+          <div class="plan hi"><b>Yearly</b><small>Best value</small></div>
+          <div class="plan"><b>Lifetime</b><small>One-time purchase</small></div>
+        </div>
+        <p class="note">Subscriptions renew automatically and are charged to your Apple Account. Cancel any time in your App Store settings. Prices are shown in the app for your region.</p>
+      </div>
+      <div class="phone"><div class="screen"><img src="img/en-06-pro.webp" alt="Onyx Pro screen with the yearly, monthly and lifetime options" width="720" height="1564" loading="lazy" decoding="async"></div></div>
+    </div></div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <p class="eyebrow">Good to know</p>
+      <h2 id="faq-h">Questions, <span class="serif">answered.</span></h2>
+    </div>
+    <div class="faq-list rv">
+      <details open><summary>Does Onyx IPTV include TV channels or movies?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>No. Onyx IPTV is a player only. It does not provide, host or sell channels, movies or series. You add the M3U playlist or Xtream login from your own IPTV provider and are responsible for the rights to the content you play.</p></div></details>
+      <details><summary>Which playlist formats are supported?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>M3U and M3U8 playlists by URL, and Xtream Codes API logins (server URL, username, password). You can also paste a <code>get.php</code> or <code>player_api</code> link and Onyx sets up the account for you. EPG data is loaded from your provider or an XMLTV source.</p></div></details>
+      <details><summary>Can I try it without a provider?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Yes. The built-in Demo Playlist uses public test streams and needs no account, so you can explore the whole interface first.</p></div></details>
+      <details><summary>Is it free?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>The app is free with one provider connection. Onyx Pro is an optional monthly or yearly subscription, or a one-time lifetime purchase. It adds unlimited connections, iCloud sync, parental controls, quality grouping, Picture in Picture, AirPlay and offline copies.</p></div></details>
+      <details><summary>Does Onyx collect my data?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>No. There is no account, no analytics SDK and no tracking. Credentials stay in the iOS Keychain on your device, and optional iCloud sync uses your own iCloud account. See the <a href="https://liridonluzha.github.io/onyx-legal/">privacy policy</a>.</p></div></details>
+      <details><summary>A stream does not play. What can I do?<span class="pm"><svg aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Check that the same stream works in your provider's recommended player, that the server URL, username and password contain no extra spaces, and that your provider has not hit its simultaneous-stream limit. The <a href="guide.html">setup guide</a> has more.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h" class="rv">Your provider deserves a <span class="serif">better</span> player.</h2>
+    <p class="lead rv" style="--i:1">Free download. Try the demo playlist first, add your provider whenever you are ready.</p>
+    <div class="appcard rv" style="--i:2">
+      <img class="icon" src="img/icon-180.png" alt="" width="64" height="64">
+      <div class="m"><b>Onyx IPTV</b><small>Entertainment · Free · In-App Purchases</small><span class="stars" aria-label="Rated 5.0 out of 5">★★★★★ 5.0</span></div>
+    </div>
+    <div class="cta-row rv" style="--i:3">
+      <a class="badge" href="https://apps.apple.com/app/id6791109716" aria-label="Download Onyx IPTV on the App Store"><img src="img/app-store-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
+    </div>
+    <div class="qr rv" style="--i:4">
+      <div class="code"><img src="img/qr-app-store.svg" alt="QR code linking to Onyx IPTV on the App Store" width="70" height="70"></div>
+      <div><b>Scan to download</b><small>Point your iPhone camera at the code to open Onyx IPTV in the App Store.</small></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="./"><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg>onyx<span class="dot">.</span><span class="sub">iptv</span></a>
+        <p class="legal">Onyx IPTV is a player for the IPTV subscription you already have. It does not provide, host or sell channels, movies or series. You are responsible for your sources and the rights to the content you play.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul><li><a href="#story">Tour</a></li><li><a href="#features">Features</a></li><li><a href="#devices">Devices</a></li><li><a href="#pro">Onyx Pro</a></li><li><a href="guide.html">Setup guide</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Help &amp; legal</h4>
+        <ul><li><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a></li><li><a href="https://liridonluzha.github.io/onyx-legal/">Privacy</a></li><li><a href="https://liridonluzha.github.io/onyx-legal/terms.html">Terms</a></li><li><a href="de.html" hreflang="de" lang="de">Deutsch</a></li></ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© 2026 Coded October · Onyx IPTV</div>
+      <div>Apple, iPhone, iPad, Apple TV and App Store are trademarks of Apple Inc.</div>
+    </div>
+  </div>
+</footer>
+<script src="site.js" defer></script>
 </body>
 </html>
