@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>IPTV auf dem iPhone einrichten: M3U-Playlist oder Xtream-Zugang – Onyx IPTV</title>
+<meta name="description" content="Schritt für Schritt: M3U-Playlist oder Xtream-Codes-Zugang deines IPTV-Anbieters auf iPhone und iPad mit Onyx IPTV einrichten, EPG laden und die häufigsten Wiedergabeprobleme lösen.">
+<link rel="canonical" href="https://liridonluzha.github.io/onyx/anleitung.html">
+<link rel="alternate" hreflang="en" href="https://liridonluzha.github.io/onyx/guide.html">
+<link rel="alternate" hreflang="de" href="https://liridonluzha.github.io/onyx/anleitung.html">
+<link rel="icon" type="image/png" sizes="180x180" href="img/icon-180.png">
+<link rel="stylesheet" href="style.css">
+<meta name="apple-itunes-app" content="app-id=6791109716">
+<meta property="og:title" content="IPTV auf dem iPhone einrichten (M3U / Xtream) – Onyx IPTV">
+<meta property="og:description" content="M3U-Playlist oder Xtream-Zugang in wenigen Taps einrichten, EPG laden, Probleme lösen.">
+<meta property="og:image" content="https://liridonluzha.github.io/onyx/img/icon-512.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HowTo","inLanguage":"de","name":"IPTV-Playlist auf dem iPhone mit Onyx IPTV einrichten","description":"M3U-Playlist oder Xtream-Codes-Zugang des eigenen Anbieters in Onyx IPTV auf iPhone oder iPad hinzufügen.","step":[
+{"@type":"HowToStep","name":"Onyx IPTV installieren","text":"Onyx IPTV aus dem App Store laden und öffnen. Wer sich erst umsehen will, wählt zuerst die Demo-Playlist."},
+{"@type":"HowToStep","name":"Zugangsart wählen","text":"Einstellungen, Verbindungen, Anbieter hinzufügen. M3U für eine Playlist-URL oder Xtream für Server-URL, Benutzername und Passwort."},
+{"@type":"HowToStep","name":"Link oder Zugangsdaten einfügen","text":"M3U-Link einfügen oder den get.php- bzw. player_api-Link des Anbieters. Onyx erkennt Xtream-Links und füllt Server, Benutzername und Passwort selbst aus."},
+{"@type":"HowToStep","name":"Programmführer laden","text":"Xtream-Konten laden das EPG automatisch. Bei M3U-Playlists die XMLTV-URL des Anbieters als EPG-Quelle eintragen."},
+{"@type":"HowToStep","name":"Losschauen","text":"Live-TV öffnen, Sender antippen, Favoriten markieren und im Guide-Tab das komplette Programmraster nutzen."}]}
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="de.html">onyx<span class="dot">.</span><span class="sub">iptv</span></a>
+  <nav class="main"><a href="de.html#features">Funktionen</a><a href="de.html#pro">Onyx Pro</a><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a><a class="lang" href="guide.html" hreflang="en" lang="en">English</a></nav>
+</div></header>
+
+<section><div class="wrap article">
+  <p class="eyebrow">Anleitung</p>
+  <h1 style="font-size:clamp(1.9rem,4vw,3rem)">IPTV auf iPhone und iPad einrichten: M3U-Playlist oder Xtream-Zugang</h1>
+  <p class="lead">Wenn dein IPTV-Anbieter dir einen M3U-Link oder einen Xtream-Codes-Zugang gegeben hat, läuft er in Onyx IPTV in etwa zwei Minuten. Diese Anleitung erklärt beides, dazu das EPG und die häufigsten Stolpersteine.</p>
+  <p class="note">Onyx IPTV ist ausschließlich ein Player. Die App stellt keine Sender, Filme oder Serien bereit, hostet nichts und verkauft nichts. Du brauchst ein Abo bei einem IPTV-Anbieter und bist für die Rechte an den abgespielten Inhalten verantwortlich.</p>
+
+  <h2>Was du brauchst</h2>
+  <ul>
+    <li>Ein iPhone oder iPad mit iOS 18 oder neuer.</li>
+    <li><a href="https://apps.apple.com/de/app/onyx-iptv/id6791109716">Onyx IPTV</a> aus dem App Store (kostenlos).</li>
+    <li>Von deinem Anbieter eines davon: eine <strong>M3U-/M3U8-Playlist-URL</strong>, einen <strong>Xtream-Codes-Zugang</strong> (Server-URL, Benutzername, Passwort) oder einen <strong>get.php-/player_api-Link</strong>, der diese Daten enthält.</li>
+  </ul>
+
+  <h2>M3U-Playlist einrichten</h2>
+  <div class="steps">
+    <div class="card"><h3>Einstellungen → Verbindungen → Anbieter hinzufügen</h3><p>Wähle <strong>M3U</strong>. Gib der Verbindung einen Namen, damit du mehrere Anbieter später auseinanderhältst.</p></div>
+    <div class="card"><h3>Playlist-URL einfügen</h3><p>Füge den kompletten Link ein, inklusive eines eventuellen <code>?username=…&amp;password=…</code>-Teils. Keine Leerzeichen davor oder dahinter.</p></div>
+    <div class="card"><h3>EPG-Quelle hinzufügen (optional)</h3><p>Wenn dein Anbieter eine XMLTV- oder EPG-URL anbietet, trag sie ins EPG-Feld ein. Onyx zeigt dann die laufende Sendung, Fortschrittsbalken und das Guide-Raster.</p></div>
+    <div class="card"><h3>Speichern und laden</h3><p>Onyx lädt die Playlist, sortiert die Sender in Gruppen und trennt Live-TV automatisch von Filmen und Serien.</p></div>
+  </div>
+
+  <h2>Xtream-Codes-Zugang einrichten</h2>
+  <div class="steps">
+    <div class="card"><h3>Einstellungen → Verbindungen → Anbieter hinzufügen</h3><p>Wähle <strong>Xtream</strong>.</p></div>
+    <div class="card"><h3>Link einfügen oder Daten eintippen</h3><p>Füge den <code>get.php</code>- oder <code>player_api</code>-Link deines Anbieters ein, Onyx füllt Server, Benutzername und Passwort selbst aus. Oder trag die drei Werte von Hand ein. Die Server-URL sieht meist so aus: <code>http://host:port</code>.</p></div>
+    <div class="card"><h3>Statuskarte prüfen</h3><p>Nach der Anmeldung zeigt die Verbindungskarte das Ablaufdatum des Kontos, die Zahl gleichzeitiger Streams deines Tarifs und wie viele Sender Catch-up unterstützen.</p></div>
+    <div class="card"><h3>Guide und Catch-up laden automatisch</h3><p>Xtream-Konten liefern das EPG mit der Anmeldung. Sender mit Archiv zeigen eine Replay-Option, und der Bereich „Etwas verpasst?“ sammelt beendete Sendungen.</p></div>
+  </div>
+
+  <h2>Die App im Alltag</h2>
+  <ul>
+    <li><strong>Live-TV</strong>: Die Liste zeigt pro Sender die laufende Sendung, einen Fortschrittsbalken und die Restzeit. Stern antippen für Favoriten. Nach Gruppe oder Kategorie filtern.</li>
+    <li><strong>Guide</strong>: Komplettes EPG-Raster mit Jetzt-Linie. Den ganzen Guide nach Titeln durchsuchen und Erinnerungen für kommende Sendungen setzen.</li>
+    <li><strong>Mediathek</strong>: Filme und Serien mit Postern, Handlung, Besetzung und Trailern. „Weiterschauen“ setzt dort fort, wo du aufgehört hast.</li>
+    <li><strong>Suche</strong>: Eine Suche über Sender, Filme und Serien.</li>
+    <li><strong>Qualitätsgruppierung</strong> (Pro): SD-, HD-, FHD- und 4K-Varianten desselben Senders werden zu einer Zeile zusammengefasst.</li>
+  </ul>
+
+  <h2>Probleme lösen</h2>
+  <div class="faq">
+    <details open><summary>„Anmeldung fehlgeschlagen“ oder leere Senderliste</summary><p>Prüfe Server-URL, Benutzername und Passwort auf Leerzeichen. Stelle sicher, dass das Konto nicht abgelaufen ist (die Statuskarte zeigt das Datum). Manche Anbieter blockieren VPN-Verbindungen.</p></details>
+    <details><summary>Ein Stream startet nicht oder bricht nach Sekunden ab</summary><p>Prüfe zuerst, ob derselbe Stream im vom Anbieter empfohlenen Player läuft. Wenn ja, ist vermutlich das Stream-Limit deines Tarifs erreicht. Onyx warnt vor der Wiedergabe, wenn alle Plätze belegt sind.</p></details>
+    <details><summary>Bild läuft, aber kein Ton, oder die Datei ist MKV/AVI</summary><p>Onyx nutzt zuerst den nativen iOS-Player und wechselt automatisch zur VLC-Engine, wenn iOS den Container oder Codec nicht dekodieren kann. Läuft ein Stream trotzdem nicht, wechsle unter Einstellungen → Wiedergabe die bevorzugte Engine.</p></details>
+    <details><summary>Der Guide ist leer</summary><p>M3U-Playlists brauchen eine separate EPG-(XMLTV-)URL vom Anbieter. Xtream-Konten laden sie automatisch; bei veralteten Daten hilft Einstellungen → Inhalte aktualisieren.</p></details>
+    <details><summary>Nichts hilft</summary><p>Schreib an <a href="mailto:onyx.iptv.support@gmail.com">onyx.iptv.support@gmail.com</a>. Bitte kein Anbieter-Passwort in die Mail schreiben.</p></details>
+  </div>
+
+  <div class="cta-band" style="padding:56px 0 0">
+    <h2>Wenn du so weit bist</h2>
+    <p class="sub" style="margin:0 auto 22px">Kostenloser Download. Probier zuerst die Demo-Playlist, wenn du magst.</p>
+    <div class="cta"><a href="https://apps.apple.com/de/app/onyx-iptv/id6791109716"><img src="img/app-store-badge-de.svg" alt="Laden im App Store" width="156" height="52"></a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© 2026 Liridon Luzha · Onyx IPTV</div>
+  <div><a href="https://liridonluzha.github.io/onyx-legal/support.html">Support</a><a href="https://liridonluzha.github.io/onyx-legal/privacy.de.html">Datenschutz</a><a href="https://liridonluzha.github.io/onyx-legal/terms.de.html">Nutzungsbedingungen</a><a href="de.html">Start</a><a href="guide.html" lang="en">English</a></div>
+</div></footer>
+</body>
+</html>

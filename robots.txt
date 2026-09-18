@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://liridonluzha.github.io/onyx/sitemap.xml
